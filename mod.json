@@ -1,0 +1,25 @@
+{
+	"geode": "4.9.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "aubbie.waytoomanydemons",
+	"name": "Way Too Many Extreme Demon Difficulties Deluxe",
+	"version": "v1.0.0",
+	"developer": "aubbie",
+	"description": "demon",
+	"dependencies": {
+		"geode.node-ids": ">=v1.20.0"
+	},
+
+	"resources": {
+		"sprites": [
+			"resources/cardemon.png",
+			"resources/uwudemon.png",
+			"resources/pearsenjoyer.png"
+		]
+	}
+}

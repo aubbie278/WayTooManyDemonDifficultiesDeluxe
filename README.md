@@ -1,5 +1,7 @@
 # FirstMod
-This is where she makes a mod.
+adds in two new demon difficulties representing the extended list of pointercrate (car demons) and the main list of pointercrate (uwu demons)
+not very good at programminger lol
+might add more demon difficulties to represent legacy extreme demons as well in the future
 
 <img src="logo.png" width="150" alt="the mod's logo" />
 

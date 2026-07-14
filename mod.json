@@ -18,8 +18,7 @@
 	"resources": {
 		"sprites": [
 			"resources/cardemon.png",
-			"resources/uwudemon.png",
-			"resources/pearsenjoyer.png"
+			"resources/uwudemon.png"
 		]
 	}
 }

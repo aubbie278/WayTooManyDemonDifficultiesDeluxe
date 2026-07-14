@@ -1,14 +1,14 @@
 {
-	"geode": "4.9.0",
+	"geode": "5.8.2",
 	"gd": {
-		"win": "2.2074",
-		"android": "2.2074",
-		"mac": "2.2074",
-		"ios": "2.2074"
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
 	},
 	"id": "aubbie.waytoomanydemons",
 	"name": "Way Too Many Extreme Demon Difficulties Deluxe",
-	"version": "v1.0.0",
+	"version": "v1.1.0",
 	"developer": "aubbie",
 	"description": "demon",
 	"dependencies": {

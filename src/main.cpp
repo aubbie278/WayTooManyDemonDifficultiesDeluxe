@@ -1,9 +1,10 @@
-/**
+/**,
  * Include the Geode headers.
  */
 #include <Geode/Geode.hpp>
 #include <Geode/modify/LevelInfoLayer.hpp>
 #include <Geode/utils/web.hpp>
+#include <Geode/utils/async.hpp> 
 #include <Geode/loader/Event.hpp>
 
 /**
@@ -13,7 +14,7 @@ using namespace geode::prelude;
 
 class $modify(LevelInfoLayer) {
 	struct Fields {
-		EventListener<web::WebTask> m_listListener{};
+		async::TaskHolder<web::WebResponse> m_listListener{};
 	};
 
 	void drawDemon(std::string_view resource) {
@@ -28,10 +29,13 @@ class $modify(LevelInfoLayer) {
 			return false;
 		}
 
-		m_fields->m_listListener.bind([this](web::WebTask::Event* event) {
-			if (web::WebResponse * result{ event->getValue() }) {
-				log::debug("response {}", result->string().unwrap());
-				std::string rawJson{ result->string().unwrap() };
+
+		auto request = web::WebRequest();
+		m_fields->m_listListener.spawn(
+			request.get(fmt::format("https://api.aredl.net/v2/api/aredl/levels/{}", level->m_levelID)),
+			[this](web::WebResponse result) {
+				log::debug("response {}", result.string().unwrap());
+				std::string rawJson{ result.string().unwrap() };
 				auto parsedJson{ matjson::parse(rawJson).unwrapOrDefault() };
 
 
@@ -51,11 +55,11 @@ class $modify(LevelInfoLayer) {
 					log::debug("not extreme demon");
 				}
 			}
-	    });
+	    );
 
-		auto request{ web::WebRequest() };
+
 		log::debug("{}", level->m_levelID);
-		m_fields->m_listListener.setFilter(request.get(fmt::format("https://api.aredl.net/v2/api/aredl/levels/{}", level->m_levelID)));
+
 		return true;
 	}
 };

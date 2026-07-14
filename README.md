@@ -6,7 +6,7 @@ might add more to represent legacy extremes in the future idk
 <img src="logo.png" width="150" alt="the mod's logo" />
 
 ## Build instructions
-For more info, see [our docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
+For more info, see [geode's docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
 ```sh
 # Assuming you have the Geode CLI set up already
 geode build

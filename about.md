@@ -1,3 +1,4 @@
 # Template Mod
+adds in two new demon difficulties representing the extended list of pointercrate (car demons) and the main list of pointercrate (uwu demons)...
 
-Edit about.md to change this
+might add more to represent legacy extremes in the future idk
